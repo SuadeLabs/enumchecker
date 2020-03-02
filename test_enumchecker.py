@@ -39,7 +39,6 @@ def test_detect_duplicates():
 
 
 def test_is_enum_class():
-
     class NotAnEnum(object):
         bases = ["Enum"]
 

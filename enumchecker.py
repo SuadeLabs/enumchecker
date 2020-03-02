@@ -248,8 +248,8 @@ def parse_args(argv: List[str]) -> Tuple[str, str]:
     return loglevel, args.dirname
 
 
-def main(args: List[str]) -> int:
-    loglevel, dirname = parse_args(args)
+def main() -> int:
+    loglevel, dirname = parse_args(sys.argv[1:])
 
     logger = configure_logger(loglevel)
     filenames = list(pyfiles(dirname))
@@ -260,4 +260,4 @@ def main(args: List[str]) -> int:
 
 
 if __name__ == "__main__":
-    exit(main(sys.argv[1:]))
+    exit(main())
